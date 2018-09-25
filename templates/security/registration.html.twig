@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br><br>
+    
+    <div class="prog">
+        <h2>Inscrivez-Vous Vite !</h2>
+    </div>
+
+    {{ form_start(form) }}
+    {{ form_row(form.username, {'label': 'Nom d\'utilisateur','attr': {'placeholder': 'Pseudo' }}) }}
+    {{ form_row(form.email, {'attr': {'placeholder': 'Email' }}) }}
+    {{ form_row(form.password, {'label': 'Mot de Passe','attr': {'placeholder': 'Mot de Passe' }}) }}
+    {{ form_row(form.confirm_password, {'label': 'Confirmation du Mot de Passe','attr': {'placeholder': 'Confirmez votre Mot de Passe' }}) }}
+
+    <button type="submit" class="btn btn-success float-right">Je m'inscris</button>
+
+    <br><br>
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
 
-    <main class="main-log">
+{% block body %}
+    
+    {% if app.user %}
+        <main class="main-log">
+
         <!-- Material form subscription -->
+            <h2>Réserver ici</h2>
             <div class="card">
                 <h2 class="card-header white-text text-center py-4 tit-con-form">
-                    <strong>Souscrire</strong>
+                    <strong></strong>
                 </h2>
 
                 <!--Card content-->
@@ -19,31 +23,36 @@
                             <a href="" target="_blank">See the last newsletter</a>
                         </p> 
                         <div class="md-form">
-                            {{ form_row(form.username, {'label': 'Nom d\'utilisateur','attr': {'placeholder': 'Pseudo' }}) }}
+                            {{ form_row(form.prenom, {'label': 'Prenom','attr': {'placeholder': 'Votre Prenom' }}) }}
                             {# <input type="text" id="registration_username" class="form-control" name="registration[username]" required="required"
                             maxlength="255" placeholder="Pseudo">
                             <label for="registration_username" class="required active">Nom d'utilisateur</label> #}
                         </div>                
                         <!-- E-mai -->
                         <div class="md-form">
-                            {{ form_row(form.email, {'attr': {'placeholder': 'Email' }}) }}
+                            {{ form_row(form.nom, {'label': 'Nom','attr': {'placeholder': 'Votre Nom' }}) }}
                             {# <input type="email" id="registration_email" class="form-control" name="registration[email]" required="required"
                             maxlength="255" placeholder="Email">
                             <label for="registration_email" class="required active">Email</label> #}
                         </div>
                         <!-- Name -->
                         <div class="md-form mt-3">
-                            {{ form_row(form.password, {'label': 'Mot de Passe','attr': {'placeholder': 'Mot de Passe' }}) }}
+                            {{ form_row(form.mail, {'label': 'Email','attr': {'placeholder': 'Votre Email' }}) }}
                             {# <input type="password" id="registration_password" name="registration[password]" required="required" placeholder="Mot de Passe" class="form-control">
                             <label for="registration_password" class="required active">Mot de Passe</label> #}
                         </div>
                         <div class="md-form mt-3">
-                            {{ form_row(form.confirm_password, {'label': 'Confirmation du Mot de Passe','attr': {'placeholder': 'Confirmez votre Mot de Passe' }}) }}
+                            {{ form_row(form.telephone, {'label': 'Telephone','attr': {'placeholder': 'Votre téléphone' }}) }}
+                            {# <input type="password" id="registration_confirm_password" name="registration[confirm_password]" required="required" placeholder="Confirmez votre Mot de Passe" class="form-control">
+                            <label for="registration_confirm_password" class="required active">Confirmation du Mot de Passe</label> #}
+                        </div>
+                        <div class="md-form mt-3">
+                            {{ form_row(form.nbre_place, {'label': 'Nbre Place Souhaité','attr': {'placeholder': 'Nombre de places désirés' } }) }}
                             {# <input type="password" id="registration_confirm_password" name="registration[confirm_password]" required="required" placeholder="Confirmez votre Mot de Passe" class="form-control">
                             <label for="registration_confirm_password" class="required active">Confirmation du Mot de Passe</label> #}
                         </div>
                         <!-- Sign in button -->
-                        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">S'inscrire</button>
+                        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Je Réserve</button>
                     {{ form_end(form) }}
                 </div>
 
@@ -51,5 +60,12 @@
             <!-- Material form subscription -->
     </main>
 
+
+
+
+
+    {% else %}
+    <p>Vous devez vous connecter pour accèder à votre espace personnel, <a href="{{path('security_login') }}">Cliquez ici</a></p>
+    {% endif %}
 
 {% endblock %}

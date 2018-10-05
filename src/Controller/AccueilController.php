@@ -13,8 +13,13 @@ class AccueilController extends Controller
      * @Route("/", name="home")
      */
     public function home() {
-
-        return $this->render('accueil/home.html.twig');
+        $repo =$this->getDoctrine()->getRepository(Hotel::class);
+        
+        $hotels = $repo->findAll();
+        
+        return $this->render('accueil/home.html.twig',[
+            'hotels' =>$hotels
+        ]);
     }
 
     /**

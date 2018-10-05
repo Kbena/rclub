@@ -1,7 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   
+    <section class="hotels">
+        <article class="list-hotel-show">
+                <h2>{{ hotel.getNomHotel }}</h2>
+                <div class="metadata">Publié le {{ hotel.getDatePublication | date('d/m/Y') }} catégorie {{ hotel.getVilleHotel }}</div> 
+                <div class="content-fluid">
+                    <img src="{{ hotel.getImgHotel }}" alt="">
+                    <p>Hotel à {{ hotel.getVilleHotel }}</p>
+                    {{ hotel.getDescriptHotel | raw }}
+
+                    {% if app.user %}
+                    <a href="{{ path('reservation') }}" class="btn btn-primary">Réserver</a>
+                    {% endif %}
+                    
+                <div>         
+        </article>
+    </section>
     
 {% endblock %}
 

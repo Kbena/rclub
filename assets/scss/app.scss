@@ -1,18 +1,27 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+.form-control{
+    color: #fff;
+}
+// a:hover{
+//     color: #00bc8c !important;
+// }
 .bienvn{
     margin-top: 0;
     margin-bottom: 0;
 }
-h2{
-    background: #00bc8c;
-}
-.prog{
+// h2, .tit-con-form{
+//     background: #00bc8c;
+// }
+.prog, .hotels, h2, h4{
     text-align: center;
 }
 .w-100{
     max-height: 450px;
+}
+.card-home{
+    margin-bottom: 0.8rem;
 }
 .card{
     height: 100%;
@@ -20,4 +29,92 @@ h2{
 .card-img-top{
     width: 238px;
     height: 180px;
+}
+.list-hotel{
+    margin: 1rem;
+}
+.list-hotel-show{
+    margin: 1.2rem;
+}
+.main-espace{
+    margin: 2.5rem;
+}
+.main-inscrpt{
+    margin: 7rem;
+}
+.main-log{
+    margin: 2rem;
+}
+.nav-e{
+    background-color: #4285f4;
+}
+.nav-t{
+    color: #fff;
+}
+.esp-tab{
+    padding-top: 1rem;
+}
+.esp-content{
+    min-height: 300px;
+}
+// .side-profil{
+//     background: #00bc8c;
+//     min-height: 400px;
+//     text-align: center;
+// }
+// .side-content{
+//     background: #00bc8c;
+//     min-height: 400px;
+// }
+// .nav-list-a{
+//     color:white;
+// }
+.btn-floating{
+    -webkit-box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    width:47px;
+    height:47px;
+    position:relative;
+    z-index:1;
+    vertical-align:middle;
+    display:inline-block;
+    overflow:hidden;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    margin:10px;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    padding:0;
+    cursor:pointer
+}
+.btn-floating i{
+    font-size:1.25rem;
+    line-height:47px
+}
+.btn-floating i{
+    display:inline-block;
+    width:inherit;
+    text-align:center;
+    color:#fff
+}
+.btn-fb{
+    background-color:#3b5998!important;
+    color:#fff!important
+  }
+.btn-tw{
+    background-color:#55acee!important;
+    color:#fff!important
+    }
+.btn-gplus{
+    background-color:#dd4b39!important;
+    color:#fff!important
+}
+.btn-li{
+    background-color:#0082ca!important;
+    color:#fff!important
+}
+.btn-dribbble{
+    background-color:#ec4a89!important;
+    color:#fff!important
 }

@@ -36,6 +36,20 @@ class Hotel
      */
     private $nbre_plce_dispo;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date_publication;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $descript_hotel;
+
+    /**
+     * @ORM\
+     */
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +99,30 @@ class Hotel
     public function setNbrePlceDispo(int $nbre_plce_dispo): self
     {
         $this->nbre_plce_dispo = $nbre_plce_dispo;
+
+        return $this;
+    }
+
+    public function getDatePublication(): ?\DateTimeInterface
+    {
+        return $this->date_publication;
+    }
+
+    public function setDatePublication(\DateTimeInterface $date_publication): self
+    {
+        $this->date_publication = $date_publication;
+
+        return $this;
+    }
+
+    public function getDescriptHotel(): ?string
+    {
+        return $this->descript_hotel;
+    }
+
+    public function setDescriptHotel(string $descript_hotel): self
+    {
+        $this->descript_hotel = $descript_hotel;
 
         return $this;
     }
